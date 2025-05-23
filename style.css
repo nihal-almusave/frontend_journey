@@ -1,0 +1,73 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #f9f9f9;
+}
+
+.like-btn {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on mobile */
+    }
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Lift card up */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Bigger shadow */
+    transition: all 0.3s ease;
+    /* Smooth animation */
+}
+
+.like-btn {
+    background: #ff4757 !important;
+    /* Default color (force override) */
+    transition: background 0.3s ease !important;
+    /* Smooth color change */
+}
+
+.like-btn:hover {
+    background: #e84118 !important;
+    /* Darker red on hover */
+}
