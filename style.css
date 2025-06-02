@@ -44,30 +44,28 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on mobile */
-    }
-}
 
+/* Add these rules */
 .card:hover {
     transform: translateY(-5px);
-    /* Lift card up */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    /* Bigger shadow */
     transition: all 0.3s ease;
-    /* Smooth animation */
 }
 
 .like-btn {
     background: #ff4757 !important;
-    /* Default color (force override) */
+    /* Force default color */
     transition: background 0.3s ease !important;
-    /* Smooth color change */
 }
 
 .like-btn:hover {
     background: #e84118 !important;
     /* Darker red on hover */
+}
+
+/* Add mobile responsiveness */
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
